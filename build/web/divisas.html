@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Angela gonzalez">
+        <meta name="descprition" content="js,css, conversiones">
+        <meta name="keywords" content="temperatura,divisas,longitud">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap-utilities.min.css">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap-grid.min.css">
+        
+        <link rel="stylesheet" href="style/sweetalert2/sweetalert2.min.css">
+        <style>
+            body
+            {
+             background-image:url("media/ima/moneda.jpg");
+             height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">Conversi&oacute;n de pesos mexicanos</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="form-label" for="txtNumeroU">Pesos mexicanos</label>
+                        <input id="txtNumeroU" type="text" class="form-control"/>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-outline-primary" onclick="calcularDivisas(1)">Dolar estadounidense</button>
+                        <button class="btn btn-outline-primary" onclick="calcularDivisas(2)">Dolar canadiense</button>
+                        <button class="btn btn-outline-primary" onclick="calcularDivisas(3)">Euro</button>
+                        <button class="btn btn-outline-primary" onclick="calcularDivisas(4)">Libra esterlina</button>
+                        <button class="btn btn-outline-primary" onclick="calcularDivisas(5)">Peso chileno</button>
+                        <button class="btn btn-outline-primary" onclick="calcularDivisas(6)">Peso uruguayo</button>
+                        <button class="btn btn-outline-primary" onclick="calcularDivisas(7)">Rupia</button>
+                        <button class="btn btn-outline-primary" onclick="calcularDivisas(8)">Yen</button>
+                        <button class="btn btn-outline-primary" onclick="calcularDivisas(9)">Zloty</button>
+                    </div>
+                    <div class="mt-4"> 
+                        <label class="form-label" for="txtResultadoU"></label>
+                        <input id="txtResultadoU" type="text"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-mt-5">
+            <div class="row">
+                <div class="col-5">
+                    <div class="container p-5 my-5 bg-black text-white">
+                        <div class="card-header">Informaci&oacute;n de las divisas </div>
+                        <p>Las divisas son las monedas utilizadas en los intercambios comerciales
+                            y financieros internacionales. Estas monedas son emitidas y reguladas 
+                            por los gobiernos de cada pa&iacute;s y son intercambiadas a nivel mundial para 
+                            la realizaci&oacute;n de transacciones comerciales, inversiones y pagos de deudas.
+                        </p>
+                    </div> 
+                </div>
+            </div> 
+        </div>
+        <div class="container">
+            <div class="col-8">
+                <a href="index.html" class="btn btn-success">Temperatura</a>
+            </div>
+        </div>
+        <script src="style/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="style/sweetalert2/sweetalert2.all.min.js"></script>
+        <script src="js/divisas.js"></script>  
+    </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Angela gonzalez">
+        <meta name="descprition" content="js,css, conversiones">
+        <meta name="keywords" content="temperatura,divisas,longitud">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap-utilities.min.css">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap-grid.min.css">
+        
+        <link rel="stylesheet" href="style/sweetalert2/sweetalert2.min.css">
+        <style>
+            body
+            {
+             background-image:url("media/ima/longi.jpg");
+             height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">Conversi&oacute;n de cent&iacute;metros</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="form-label" for="txtNumero4">Cent&iacute;metros</label>
+                        <input id="txtNumero4" type="text" class="form-control"/>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-outline-primary" onclick="calcularLongitud(1)">Pulgadas</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitud(2)">Pies</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitud(3)">Yardas</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitud(4)">Millas</button>
+                    </div>
+                    <div class="mt-4"> 
+                        <label class="form-label" for="txtResultado4"></label>
+                        <input id="txtResultado4" type="text"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-mt-5">
+            <div class="row">
+                <div class="col-5">
+                    <div class="container p-5 my-5 bg-black text-white">
+                        <div class="card-header">Informaci&oacute;n de la longitud cent&iacute;metros </div>
+                        <p>La escala es la relaci&oacute;n de proporci&oacute;n entre las dimensiones reales de un objeto
+                            y las del dibujo que lo representa.
+                        </p>
+                    </div> 
+                </div>
+            </div> 
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">Conversi&oacute;n de pulgadas</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="form-label" for="txtNumero5">Pulgadas</label>
+                        <input id="txtNumero5" type="text" class="form-control"/>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudDos(1)">Centimetros</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudDos(2)">Pies</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudDos(3)">Yardas</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudDos(4)">Millas</button>
+                    </div>
+                    <div class="mt-4"> 
+                        <label class="form-label" for="txtResultado4"></label>
+                        <input id="txtResultado5" type="text"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-mt-5">
+            <div class="row">
+                <div class="col-5">
+                    <div class="container p-5 my-5 bg-black text-white">
+                        <div class="card-header">Informaci&oacute;n de la longitud pulgadas </div>
+                        <p>Unidad de longitud que en un principio correspond&iacute;a a la medida promedio 
+                            de la primera falange del pulgar de un hombre adulto. Ha sido estandarizada 
+                            de diversos modos, pero la de uso m&acute;s com&uacute;n equivale a 2.54 cent&iacute;metros y a 
+                            la doceava parte de un pie.
+                        </p>
+                    </div> 
+                </div>
+            </div> 
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">Conversi&oacute;n de pies</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="form-label" for="txtNumero6">Pies</label>
+                        <input id="txtNumero6" type="text" class="form-control"/>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudTres(1)">Centimetros</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudTres(2)">Pulgadas</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudTres(3)">Yardas</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudTres(4)">Millas</button>
+                    </div>
+                    <div class="mt-4"> 
+                        <label class="form-label" for="txtResultado6"></label>
+                        <input id="txtResultado6" type="text"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-mt-5">
+            <div class="row">
+                <div class="col-5">
+                    <div class="container p-5 my-5 bg-black text-white">
+                        <div class="card-header">Informaci&oacute;n de la longitud pies </div>
+                        <p>Es un instrumento indicado para medir dimensiones pequeñas con precisi&oacute;n. 
+                            Consta de dos partes, la regla y la pieza deslizante que permite medir dimensiones 
+                            externas e internas de un objeto, as&iacute; como la profundidad de un orificio ciego.
+                        </p>
+                    </div> 
+                </div>
+            </div> 
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">Conversi&oacute;n de yardas</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="form-label" for="txtNumero7">Yardas</label>
+                        <input id="txtNumero7" type="text" class="form-control"/>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudCuatro(1)">Centimetros</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudCuatro(2)">Pulgadas</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudCuatro(3)">Yardas</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudCuatro(4)">Millas</button>
+                    </div>
+                    <div class="mt-4"> 
+                        <label class="form-label" for="txtResultado7"></label>
+                        <input id="txtResultado7" type="text"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-mt-5">
+            <div class="row">
+                <div class="col-5">
+                    <div class="container p-5 my-5 bg-black text-white">
+                        <div class="card-header">Informaci&oacute;n de la longitud yardas </div>
+                        <p>arda es la unidad básica de longitud en los sistemas
+                            de medida que se utilizan en Estados Unidos y el Reino Unido.
+                        </p>
+                    </div> 
+                </div>
+            </div> 
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">Conversi&oacute;n de Millas</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="form-label" for="txtNumero8">Millas</label>
+                        <input id="txtNumero8" type="text" class="form-control"/>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudCinco(1)">Centimetros</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudCinco(2)">Pulgadas</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudCinco(3)">Yardas</button>
+                        <button class="btn btn-outline-primary" onclick="calcularLongitudCinco(4)">Millas</button>
+                    </div>
+                    <div class="mt-4"> 
+                        <label class="form-label" for="txtResultado8"></label>
+                        <input id="txtResultado8" type="text"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-mt-5">
+            <div class="row">
+                <div class="col-5">
+                    <div class="container p-5 my-5 bg-black text-white">
+                        <div class="card-header">Informaci&oacute;n de la longitud millas </div>
+                        <p>Para medir la velocidad (millas por hora), distancias de rutas mercantes.
+                        </p>
+                    </div> 
+                </div>
+            </div> 
+        </div>
+        <div class="container">
+            <div class="col-8">
+                <a href="index.html" class="btn btn-success">Temperatura</a>
+            </div>
+        </div>
+        <script src="style/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="style/sweetalert2/sweetalert2.all.min.js"></script>
+        <script src="js/longitud.js"></script>  
+    </body>
+</html>

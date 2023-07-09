@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Angela gonzalez">
+        <meta name="descprition" content="js,css, conversiones">
+        <meta name="keywords" content="temperatura,divisas,longitud">
+         <link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap-utilities.min.css">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap-grid.min.css">
+        
+        <link rel="stylesheet" href="style/sweetalert2/sweetalert2.min.css">
+        <style>
+            body
+            {
+             background-image:url("media/ima/temp.jpg");
+             height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="col-3">
+            <div class="card">
+                <div class="container p-5 my-5 bg-black text-white">
+                    <div class="card-header">Conversi&oacute;n de grados</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label" for="txtNumero1">Grados</label>
+                            <input id="txtNumero1" type="text" class="form-control"/>
+                        </div>
+                        <div class="mt-4">
+                            <button class="btn btn-outline-primary" onclick="calcularTemperatura(1)">Fahrenheit</button>
+                            <button class="btn btn-outline-primary" onclick="calcularTemperatura(2)">Kelvin</button>
+                        </div>
+                        <div class="mt-4"> 
+                            <label class="form-label" for="txtResultado"></label>
+                            <input id="txtResultado" type="text"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-mt-5">
+            <div class="row">
+                <div class="col-5">
+                    <div class="container p-5 my-5 bg-black text-white">
+                        <div class="card-header">Informaci&oacute;n de la escala Celsius </div>
+                        <p>La escala Celsius. Tambi&eacute;n conocida como “escala cent&iacute;grada”,
+                            es la m&aacute;s utilizada junto con la escala Fahrenheit. En esta escala,
+                            el punto de congelaci&oacute;n del agua equivale a 0 °C (cero grados cent&iacute;grados)
+                            y su punto de ebullici&oacute;n a 100 °C.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="container p-5 my-5 bg-black text-white">
+                    <div class="card-header">Conversi&oacute;n de grados Fahrenheit</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label" for="txtNumero2">Grados Fahrenheit</label>
+                            <input id="txtNumero2" type="text" class="form-control"/>
+                        </div>
+                        <div class="mt-4">
+                            <button class="btn btn-outline-primary" onclick="calcularTemperaturaDos(1)">Grados centigrados</button>
+                            <button class="btn btn-outline-primary" onclick="calcularTemperaturaDos(2)">Kelvin</button>
+                        </div>
+                        <div class="mt-4"> 
+                            <label class="form-label" for="txtResultadoo"></label>
+                            <input id="txtResultadoo" type="text"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-mt-5">
+            <div class="row">
+                <div class="col-5">
+                    <div class="container p-5 my-5 bg-black text-white">
+                        <div class="card-header">Informaci&oacute;n de la escala Fahrenheit </div>
+                        <p>la escala Fahrenheit es la forma de medir la temperatura m&acute;s com&uacute;n 
+                            en Estados Unidos y en algunas partes del Caribe. 
+                        </p>
+                    </div> 
+                </div>
+            </div> 
+        </div>
+        <div class="col-5">
+            <div class="card">
+                <div class="container p-5 my-5 bg-black text-white">
+                    <div class="card-header">Conversi&oacute;n de grados Kelvin</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label" for="txtNumero3">Grados Kelvin</label>
+                            <input id="txtNumero3" type="text" class="form-control"/>
+                        </div>
+                        <div class="mt-4">
+                            <button class="btn btn-outline-primary" onclick="calcularTemperaturaTres(1)">Grados centigrados</button>
+                            <button class="btn btn-outline-primary" onclick="calcularTemperaturaTres(2)">Fahrenheit</button>
+                        </div>
+                        <div class="mt-4"> 
+                            <label class="form-label" for="txtResultadooo"></label>
+                            <input id="txtResultadooo" type="text"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-mt-5">
+            <div class="row">
+                <div class="col-5">
+                    <div class="container p-5 my-5 bg-black text-white">
+                        <div class="card-header">Informaci&oacute;n de la escala Kelvin  </div>
+                        <p>Kelvin es la unidad base de temperatura termodin&aacute;mica del Sistema Internacional de Unidades
+                            Los grados Kelvin se utilizan en iluminaci&oacute;n para medir la
+                            temperatura de color de una bombilla
+                        </p>
+                    </div> 
+                </div>
+            </div> 
+        </div>
+        <div class="container">
+            <div class="col-8">
+                <a href="longitud.html" class="btn btn-success">Longitud</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-8">
+                <a href="divisas.html" class="btn btn-success">Divisas</a>
+            </div>
+        </div>
+        <script src="style/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="style/sweetalert2/sweetalert2.all.min.js"></script>
+        <script src="js/temperatura.js"></script>                     
+    </body>
+</html>
